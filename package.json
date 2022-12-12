@@ -1,10 +1,13 @@
 {
+  "homepage": "https://melek-hedhili.github.io/tsyp_backend/",
   "name": "backend_app",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server"
+    "start": "nodemon server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
