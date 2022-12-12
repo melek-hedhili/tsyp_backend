@@ -17,12 +17,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(
   cors({
-    //origin: "http://localhost:3000",
-    origin: "https://melek-hedhili.github.io/tsyp/",
+    origin: ["http://localhost:3000", "https://tsyp-backend-ez1o.vercel.app/"],
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
 );
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 app.use("/auth", authRoute);
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
