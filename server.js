@@ -17,7 +17,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://tsyp-backend-ez1o.vercel.app/"],
+    origin: ["http://localhost:3000", "https://melek-hedhili.github.io/tsyp"],
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
